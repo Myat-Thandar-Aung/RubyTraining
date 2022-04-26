@@ -16,14 +16,16 @@ end
 puts "Please Choose(Person/Student)"
 result = gets.chomp
 
-
+if result == "Person"
   puts "Enter User Name"
   person_input = gets.chomp
   person = Person.new
   person.name = person_input
-  person.print_name(person.name) if result == "Person"
+  person.print_name(person.name)
+end
 
 
+if result == "Student"
  puts "Enter Student Name"
  student_input = gets.chomp
  puts "Enter Roll Number"
@@ -33,6 +35,6 @@ result = gets.chomp
  student.print_name(student.name)
  student.roll_number = student_roll_no
  student.print_roll(student.roll_number) if result == "Student"
-
+end
 
 
